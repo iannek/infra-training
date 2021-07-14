@@ -41,6 +41,9 @@ shellモジュールは、使うと必ずchangedになってしまう（＝毎�
 
 ```bash
 ssh target01 -i /root/.ssh/test_key "rm -f ~/resultfile"
+```
+
+```bash
 ssh target02 -i /root/.ssh/test_key "rm -f ~/resultfile"
 ```
 
@@ -54,6 +57,9 @@ ansible-playbook -i inventory playbook_kadai-6-2.yaml
 
 ```bash
 ssh target01 -i /root/.ssh/test_key "cat ~/resultfile"
+```
+
+```bash
 ssh target02 -i /root/.ssh/test_key "cat ~/resultfile"
 ```
 
@@ -67,6 +73,9 @@ ansible-playbook -i inventory playbook_kadai-6-2.yaml
 
 ```bash
 ssh target01 -i /root/.ssh/test_key "cat ~/resultfile"
+```
+
+```bash
 ssh target02 -i /root/.ssh/test_key "cat ~/resultfile"
 ```
 
