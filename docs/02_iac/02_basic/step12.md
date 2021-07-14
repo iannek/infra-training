@@ -40,10 +40,7 @@ shellモジュールは、使うと必ずchangedになってしまう（＝毎�
 過去の実行で作成された`resultfile`を削除
 
 ```bash
-ssh target01 -i /root/.ssh/test_key "rm -f ~/resultfile"
-```
-
-```bash
+ssh target01 -i /root/.ssh/test_key "rm -f ~/resultfile" &&
 ssh target02 -i /root/.ssh/test_key "rm -f ~/resultfile"
 ```
 
@@ -56,10 +53,7 @@ ansible-playbook -i inventory playbook_kadai-6-2.yaml
 `resultfile`が作成されたことを確認
 
 ```bash
-ssh target01 -i /root/.ssh/test_key "cat ~/resultfile"
-```
-
-```bash
+ssh target01 -i /root/.ssh/test_key "cat ~/resultfile" &&
 ssh target02 -i /root/.ssh/test_key "cat ~/resultfile"
 ```
 
@@ -72,10 +66,7 @@ ansible-playbook -i inventory playbook_kadai-6-2.yaml
 `resultfile`に1行しかホスト名の記載された行が無いことを確認
 
 ```bash
-ssh target01 -i /root/.ssh/test_key "cat ~/resultfile"
-```
-
-```bash
+ssh target01 -i /root/.ssh/test_key "cat ~/resultfile" &&
 ssh target02 -i /root/.ssh/test_key "cat ~/resultfile"
 ```
 
